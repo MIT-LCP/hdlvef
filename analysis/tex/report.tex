@@ -1,0 +1,323 @@
+%% This is file `elsarticle-template-1-num.tex',
+%%
+%% Copyright 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%%
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%%
+%% $Id: elsarticle-template-1-num.tex 149 2009-10-08 05:01:15Z rishi $
+%% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1-num.tex $
+%%
+\documentclass[final,10pt]{elsarticle}
+
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+%% \usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+%% \usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+\usepackage{booktabs}
+%\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{longtable}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+
+\journal{Journal Name}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{Effect of hyperdynamic LVEF on ICU outcomes}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+\author{Joseph Panessa, Thomas Brennan, Marco Pimentel, Mengling Feng, Leo Celi}
+
+\address{Cambridge MA, United States}
+
+
+\begin{abstract}
+%% Text of abstract
+\textbf{Objective}
+ To study the effect of hyperdynamic left ventricular function on ICU outcomes.
+
+\end{abstract}
+
+\begin{keyword}
+Intensive Care Unit \sep Hyperdynamic
+%% keywords here, in the form: keyword \sep keyword
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+\linenumbers
+
+%% main text
+\section{Background}
+\label{S:1}
+In a recent meta-analysis review by Huang et al.~(2013)~\cite{huang2013early} the 
+authors attemped to answer the question whether ventricular depression or dilation is 
+associated with lower mortality rates. A total of 62 studies were reviewed and 14 
+included in the analysis. The meta-analysis failed to find any evidence to support the 
+view that the survivors from severe sepsis or septic shock had lower ejection fractions.
+This study aims to further explore this research question using the MIMIC-II clinical 
+database from the Beth Israel Deaconness Medical Center in Boston, MA~\cite{SaeedCCM11}.
+ 
+
+\section{Methods}
+
+We conducted a retrospective cohort study using the Multiparameter 
+Intelligent Monitoring in Intensive Care II (MIMIC II) database. 
+MIMIC II is a large open-access database, which includes 
+data from electronic medical records of patients 
+admitted to the ICUs at Beth Israel Deaconess Medical Center since 2001. 
+The creation and use of the MIMIC database was approved by the institutional 
+review boards of both Beth Israel Deaconess Medical Center and 
+Massachusetts Institute of Technology (IRB protocol 2001-P-001699/3).
+
+All adult patient records who underwent an echocardiograph 
+in the database were screened for purposes of inclusion. 
+Patients were excluded if their left-ventricular function was suppresed 
+The cohort characteristics used in this study is shown in Figure~\ref{fig:cohort}. 
+The study outcome was 28-day mortality among the entire
+patient cohort.
+
+All statistical analysis was performed using R. 
+Baseline comparisons were performed using Fisher tests for categorical variables with 
+results reported as numbers and percentages. 
+Continuously normally distributed variables were compared using \emph{t}-tests and 
+reported as median, while non-normally distributed data 
+were compared using Mann-Whitney tests and reported as medians and 
+interquartile range (IQR).
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth,natheight=612,natwidth=792]{../figure/fig_cohort.pdf}
+\caption{Patient record selection. Using the MIMIC II database 
+we identified 2,481 patients that had a echo report.}
+\label{fig:cohort}
+\end{figure}
+
+\section{Results}
+Table~\ref{tbl1:hypers} highlights the results of the univariate analysis 
+for all patients with hyperdynamic EF. Table~\ref{tbl1:acute_hypers} highlights the results of the univariate analysis 
+for all patients with acute hyperdynamic EF. Significant values ($P<0.05$) are shown in bold. 
+Hyperdynamic patients are more likely to be female, be admitted to MICU, SICU 
+and ventilated.
+Hyperdynamic patients also have higher risk of mortality, SOFA and SAPSI scores and 
+stay longer in ICU. Table~\ref{tbl:all_icd9} looks at potential confounders 
+for the cohort: hyperdynamic patients are more liekly to have congestive heart failure, 
+hypertension and cancer. 
+
+Table~\ref{tbl:sepsis} highlights the results of the univariate 
+analysis for all septic patients. Significant values ($P<0.05$) are shown in bold. 
+Hyperdynamic septic patients have a higher 28-day and ICU/hospital mortality are more 
+likely to be administered more fluids. The confounder analysis in 
+Table~\ref{tbl:sepsis_icd9} is inconclusive.
+
+
+\begin{table}[h]
+\begin{tabular}{l c c c}
+\toprule
+\input{table1_normal-hdlvef.tex}
+\bottomrule
+\end{tabular}
+\caption{Characteristics of normal versus all HDLVEF patients}
+\label{tbl:hypers}
+\end{table}
+
+%\begin{table}[h]
+%\begin{tabular}{l c c c}
+%\toprule
+%\input{table1_normal-hdlvef_parts.tex}
+%\bottomrule
+%\end{tabular}
+%\caption{Characteristics of normal versus all HDLVEF patients}
+%\label{tbl:hypers}
+%\end{table}
+
+%\begin{table}[h]
+%\begin{tabular}{l c c c}
+%\toprule
+%\input{table1_vasopressors-hdlvef.tex}
+%\bottomrule
+%\end{tabular}
+%\caption{Characteristics of normal versus all HDLVEF patients}
+%\label{tbl:hypers}
+%\end{table}
+
+\begin{table}[h]
+\begin{tabular}{l c c}
+\toprule
+\input{table2_regression-hdlvef.tex}
+\bottomrule
+\end{tabular}
+\caption{Multivariate logistic regression model predicting 28-day mortality for all patients}
+\label{tbl:all-comorb}
+\end{table}
+
+\begin{table}[t]
+\begin{tabular}{l c c c}
+\toprule
+\input{table3_sepsis_regression.tex}
+\bottomrule
+\end{tabular}
+\caption{Multivariate logistic regression model predicting 28-day mortality for septic patients}
+\label{tbl:acute-charac}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{l c c}
+\toprule
+\input{table4_coxmodel_survivors-1yr.tex}
+\bottomrule
+\end{tabular}
+\caption{Multivariate Cox Hazard model predicting one-year mortality for all 28-day survivors}
+\label{tbl:all-comorb}
+\end{table}
+
+%% vasopressors _k are the same  
+%% ECHO_TIME minus 24 hours
+%\begin{tabular}{l c c}
+%\toprule
+%\input{table5_vasopressors_normal-hyperdynamic.tex}
+%\bottomrule
+%\end{tabular}
+%\caption{Characteristics of normal versus all hyperdynamic EF patients}
+%\label{tbl1:hypers}
+%\end{table}
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}          ==>>  [#]
+%%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
+%%   \citet{key}         ==>>  Author [#]
+
+%% References with bibTeX database:
+
+\bibliographystyle{model1-num-names}
+\bibliography{../../lcp.bib}
+
+%% Authors are advised to submit their bibtex database files. They are
+%% requested to list a bibtex style file in the manuscript if they do
+%% not want to use model1-num-names.bst.
+
+%% References without bibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-1-num.tex'.

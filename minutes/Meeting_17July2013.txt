@@ -1,0 +1,18 @@
+Present: Leo Celi, Thomas Brennan, Marco Pimentel, Joey Panessa
+
+Venue: 7th floor, WCC, BIDMC
+
+Notes:
+ - remove ranges for mortality
+ - limit fluid analysis to first 3 days
+ - change p-value to < 0.5
+ - look at lactate, WBC and createnin during first 3 days: highest value, median
+ - extract 10 echo reports at random of patients with CHF 
+ - add vasopressor duration and dose analysis
+ - extract SOFA and SAPS1 scores for first 3 days and day of echo
+ - use Angus sepsis criteria
+ - do landmark analysis (one year) of hospital survivors
+ - see how many echos were taken on vasopressors
+ - for hyperdynamic group, did they have other echos and if so were they still 
+   hyperdynamic (i.e. acute or chronic)
+

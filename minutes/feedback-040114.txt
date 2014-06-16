@@ -1,0 +1,25 @@
+remove outcome data from table 1
+make table 2 into table 1 (define what patient is like, eg. saps, sofa, rrt, ventilation, on pressors, lab tests (max), fluids in/out)
+sub group table 2: elixhauser, add sepsis - remove ICD9
+table 3: outcomes
+table 4: sub group analysis: outcomes and treatments for septic patients (simplify table 4)
+table 5: sub group analysis: outcomes and treatments for acute vs chronic hyperdynamic
+scrap table 7
+regression analysis:
+ - outcome 28 day mortality
+ - variables: saps, ventilation, rrt, pressors, EF
+
+
+general:
+ - significant p-values shown as asterisks per variable
+ - creatinine mispelt 
+
+
+
+% per column
+label createnine -> createnine
+fi 3d ml
+remove caps
+column labels
+p-values for outcomes tabels 3 & 6
+
