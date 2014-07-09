@@ -12,9 +12,9 @@ with adult_adm as (
     end as careunit,
     icustay_intime
     from mimic2v26.icustay_detail 
-    where icustay_first_service <> 'CCU'
-      and icustay_first_service <> 'CSRU'
-      and subject_icustay_seq = 1
+    where subject_icustay_seq = 1
+      --and icustay_first_service <> 'CCU'
+      --and icustay_first_service <> 'CSRU'
 
 )
 --select * from adult_adm;
@@ -45,11 +45,15 @@ with adult_adm as (
     from icu_echos ie
     join adult_adm aa 
        on aa.icustay_id = ie.icustay_id
+    where aa.careunit <> 'CCU'
+      and aa.careunit <> 'CSRU'
     order by subject_id
 )
 --select * from cohort;
 --select distinct subject_id, icustay_id from cohort where lvef_group = 0 order by subject_id;
---select count(distinct subject_id) from cohort; -- 3,851 subject_id
+--select count(distinct subject_id) from cohort; -- 7,253 subject_id
+--select count(distinct subject_id) from cohort where careunit = 'CSRU' or careunit = 'CCU'; -- 3,402 subject_id
+--select count(distinct subject_id) from cohort where careunit = 'MICU' or careunit = 'SICU'; -- 3,402 subject_id
 --select count(distinct subject_id) from cohort where lvef_group = 0; -- 100 subjects
 --select count(distinct subject_id) from cohort where lvef_group > 0; -- 3751 subjects
 --select count(distinct subject_id) from cohort where lvef_group = 1 or lvef_group = 2; -- 884 subjects
