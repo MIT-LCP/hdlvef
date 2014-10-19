@@ -19,7 +19,7 @@ with vasopressor_all as (
   
   from tbrennan.hyperdynamic_cohort cd
   
-  join mimic2v26.medevents m on cd.icustay_id = m.icustay_id
+  left join mimic2v26.medevents m on cd.icustay_id = m.icustay_id
   
   where 
       m.itemid in (42,43,44,47,51,119,120,125,127,128) 
@@ -95,8 +95,8 @@ with vasopressor_all as (
   end as levophed,
   case 
     when milrinone is null then 0 
-    when milrinone > 0.5 then 1
-    else milrinone/0.5
+    when milrinone > 0.75 then 1
+    else milrinone/0.75
   end as milrinone,
   case 
     when neosynephrine is null then 0 
@@ -109,7 +109,7 @@ with vasopressor_all as (
 )
 
 select ma.icustay_id
-  ,round(ma.dobutamine+ma.dopamine+ma.ephinephrine+ma.vasopressin+ma.levophed+ma.milrinone+ma.neosynephrine,5) vassopressor_adjusteddose
+  ,round(ma.dobutamine+ma.dopamine+ma.ephinephrine+ma.vasopressin+ma.levophed+ma.milrinone+ma.neosynephrine,5) vasopressor_adjusteddose
   ,vc.no_vasopressors
 from vasopressor_maxadjusted ma
 join vasopressor_count vc on vc.icustay_id = ma.icustay_id;

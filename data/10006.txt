@@ -1,0 +1,204 @@
+Admission Date:  [**2949-9-30**]		    Discharge Date:   [**2949-10-9*
+	   *] Date of Birth:  [**2879-2-10**]		  Sex:	 F Service: MEDICINE Allerg
+	   ies: Lidocaine / Heparin Sodium Attending:[**First Name3 (LF) 45**] Chief Compla
+	   int:Fever and chills Major Surgical or Invasive Procedure:HD tunnel catheter rep
+	   lacement History of Present Illness:Ms. [**Known patient lastname 46**] is a 70
+	   year old female with ESRD on HD through tunneled catheter (hx of peritoneal dial
+	   ysis until VRE peritonitis and PD catheter removal in [**2949-9-20**]), HTN, DMI
+	   I, CAD, Afib, CHF (EF 50%), who presents from [**Location (un) 47**] Dialsis wit
+	   h fever, chills for one hour during HD.  Dialysis was completed and the patient
+	   was transferred to [**Hospital1 19**] where she was found to have a temperature
+	   of 103 and HR of 120 with lactate of 4.4.  Ms. [**Known patient lastname 46**] r
+	   eceived Ceftriaxone 1g IV, Flagyl 500mg IV, and tylenol (unasyn 3g x1 written fo
+	   r but never signed) in the ED. She denied any SOB, cough, sputum, n/v/d, dysuria
+	   , burning or difficulty with urination. As per patient and her family, the patie
+	   nt has been in her USOH up until this point. Ms. [**Known patient lastname 46**]
+	    was admitted to FICU for sepsis protocol. Past Medical History:Atrial fibrillat
+	   ionSignificant for recurrent GI bleeding from AVMs-colonoscopy gastro and small
+	   bowel enteroscopy all showing AVM.Four endoscopies which showed bleeding ulcers
+	   in the colon and small intestine, and were treated with cauterization. Non-insul
+	   in-dependent diabetes - diagnosed at the age of 50- HgbA1C = 6.2 in 8/04hyperten
+	   sion congestive heart failure, goutESRD secondary to hypertensive nephrosclerosi
+	   s on peritoneal dialysis x 3 years without complications chronic anemiaaortic in
+	   sufficiency.Recent admission to NEBH in 08/04 for diverticulitis[**2-23**]- C. d
+	   ificile, pancolitis associated with hypokalemia, profound weight loss, dehydrati
+	   on, and hypomagnesemia.H/o parotitisH/o goutH/o Clostridium [**Doctor Last Name
+	   48**] sepsisPAST SURGICAL HISTORY:Laminectomy, C-section x4, and cholecystectomy
+	   .Past Cardiac history:[**6-/2946**]- MIBI- 1) Moderate, fixed perfusion defects
+	   in the lateral wall, involving especially the inferior portion. 2) Multi-vessel
+	   disease cannot be excluded given left ventricular enlargement, global hypokinesi
+	   s, and depressed EF of 43%. Cath: [**2946-9-22**]- R dominant system with nml co
+	   ronary arteries[**6-25**]:Echo: LVK, global HK, LVEF is 50%.     Social History:
+	   Retired RN. Pt has been living at [**Name Prefix (Prefixes) **] [**Last Name (Pr
+	   efixes) 49**] rehab since her last discharge from [**Hospital1 19**] and communt
+	   es to [**Location (un) 47**] for dialysis three times a week.   Pt admits to 100
+	    pack year history of smoking (2ppd x 49 years).  However, the patient denies an
+	   y history of alcohol use or illicit drug use. Family History:One son has hyperte
+	   nsion and one son recently had a cerebro vascular accident. Her mother died of a
+	    ruptured cerebral aneurysm and father died when he was 80.	Physical Exam:Physi
+	   cal Exam:VS: Tc: 98.6   HR: 93   BP: 120s/50s   RR: 15   SaO2: 100%Gen: patient
+	   lying in bed in NAD, appearing younger than her stated age. She is alert and ori
+	   ented x3 and conversing appropriatelyHEENT: PERRL, EOMI, anicteric, mmmNeck: Lef
+	   t IJ bandage has dried blood but otherwise, no obvious signs of bleeding, hemato
+	   ma, tenderness at site.CV: RRR S1, S2, ?SEM at LSBChest: CTA bilaterally, R tunn
+	   eled IJ with dressing c/d/i.  No signs of acute bleeding, hematoma, pus drainage
+	   , tenderness to palpationAbd: soft, NT, ND, well healed scar at PD siteExt: warm
+	   , well perfused, no c/c/e Pertinent Results:[**2949-9-30**] 05:33PM	 LACTATE-4.
+	   4*[**2949-9-30**] 05:38PM   PT-21.2* PTT-32.7 INR(PT)-2.8[**2949-9-30**] 05:38PM
+	      NEUTS-86.6* LYMPHS-7.9* MONOS-5.0 EOS-0.4 BASOS-0.2[**2949-9-30**] 05:38PM
+	   WBC-7.8 RBC-4.46 HGB-13.7 HCT-42.4 MCV-95 MCH-30.8 MCHC-32.4 RDW-20.0*[**2949-9-
+	   30**] 05:38PM   CRP-8.92*[**2949-9-30**] 05:38PM   CORTISOL-49.3*[**2949-9-30**]
+	    05:38PM   ALT(SGPT)-9 AST(SGOT)-40 ALK PHOS-167* TOT BILI-1.0[**2949-9-30**] 05
+	   :38PM   GLUCOSE-217* UREA N-9 CREAT-3.0*# SODIUM-139 POTASSIUM-6.0* CHLORIDE-96
+	   TOTAL CO2-29 ANION GAP-20CLOSTRIDIUM DIFFICILE(Final [**2949-10-8**]): FECES NEG
+	   ATIVE FOR C. DIFFICILE TOXIN BY EIA. AEROBIC BOTTLE (Final [**2949-10-4**]):
+	      STAPHYLOCOCCUS, COAGULASE NEGATIVE.    ISOLATED FROM ONE SET ONLY.	  S
+	   ENSITIVITIES REQUESTED BY DR. [**Last Name (STitle) **]. ABULO (PAGER [**Pager n
+	   umber 50**]).	  FINAL SENSITIVITIES.		COAG NEG STAPH does NOT req
+	   uire contact precautions, regardless of	   resistance.		Oxacillin R
+	   ESISTANT Staphylococci MUST be reported as also	   RESISTANT to other penic
+	   illins, cephalosporins, carbacephems,	 carbapenems, and beta-lactamase in
+	   hibitor combinations.	  Rifampin should not be used alone for therapy.
+		  Please contact the Microbiology Laboratory ([**5-/3251**]) immediately if
+		    sensitivity to clindamycin is required on this patient's isolate.
+				    SENSITIVITIES: MIC expressed in MCG/ML
+		_________________________________________________________
+		      STAPHYLOCOCCUS, COAGULASE NEGATIVE			     |	 ER
+	   YTHROMYCIN----------   =>8 RGENTAMICIN------------ <=0.5 SLEVOFLOXACIN----------
+		4 IOXACILLIN-------------   =>4 RPENICILLIN------------ =>0.5 RTETRACYCLINE
+	   ----------	<=1 SVANCOMYCIN------------	2 S   ANAEROBIC BOTTLE (Final [**29
+	   49-10-3**]):       REPORTED BY PHONE TO [**Last Name (LF) 51**],[**First Name3 (
+	   LF) 52**] ON [**2949-10-1**] @ 2118.       STAPHYLOCOCCUS, COAGULASE NEGATIVE.
+	     ISOLATED FROM ONE SET ONLY.	  SENSITIVITIES PERFORMED FROM AEROBIC BOTT
+	   LE. CT abdomen:1) Thickened wall in long segment of sigmoid colon, consistent wi
+	   th diverticulitis, unchanged. There is a small amount of interlooped free fluid
+	   in the pelvis, not amenable to drainage.2) Pelvic fluid collection, of uncertain
+	    origin, that was aspirated from [**9-24**] and shown to be not contaminated, an
+	   d unchanged.TTE: Moderate aortic regurgitation and minimal aortic stenosis but n
+	   o discrete vegetation seen (does not exclude). Regional left ventricular systoli
+	   c dysfunction c/w CAD. Mild mitral regurgitation.	Compared with the prior stu
+	   dy (tape reviewed) of [**2946-6-30**], left ventricular systolic function is now
+	    depressed (40%). The severity of aortic regurgitation is similar.  CXR: Right j
+	   ugular dialysis catheter is in right atrium. PICC line is in SVC, partly obscure
+	   d by the dialysis catheter. Linear atelectases are present in both lower zones.
+	   No pleural effusion. Degenerative changes are present in the thoracic spine and
+	   in the glenohumeral joints bilaterally. Surgical clips are present in the right
+	   upper quadrant status post cholecystectomy.	Brief Hospital Course:A/P: Ms. [**K
+	   nown patient lastname 46**] is a 70 year old women with ESRD on HD who presents
+	   with fever to 103, chills, and tachycardia to 103 with possible line infection.
+	   .1.	Sepsis:  The patient was initially sent to the intensive care unit under th
+	   e sepsis protocol. She was started on vancomycin for skin flora and unasyn for G
+	   roup D enterococcus (VRE) sensitive to amp (previous infections over last year).
+	    Her blood cultures drawn at [**Location (un) 47**] grew out oxacillin resistant
+	    coag negative staph. Her urine cultures were without grown.  A CXR was obtained
+	    and was without signs of pneumonia. Once she was stabilized, Ms. [**Known patie
+	   nt lastname 46**] was sent to the floor where her tunneled catheter was removed.
+	    The tip was sent for culture but did not grow any organisms.Access was an issue
+	    as 3 attempts in ED failed, including one with US. Instead a PICC was placed an
+	   d eventually, after she was free of bacteria for > 48 hours, a new tunnel line w
+	   as placed. Despite placement of a new line and clean surveillance cultures, Ms.
+	   [**Known patient lastname 46**] continued to spike fevers. She spiked through he
+	   r vancomycin which was always re-dosed when her daily levels fell below 15. An a
+	   bdominal CT was obtained, revealing a 7 cm mass, consistent with an abscess, abo
+	   ve the bladder. Considering that she had been recently hospitalized with a diver
+	   ticulitis and peritonitis, it seemed urgent to intervene on this "abscess". It w
+	   as evacuated under IR guidance but no organisms appeared on gram stain and nothi
+	   ng grew on culture. It became apparent that this was most likely a fluid collect
+	   ion from the patient's peritoneal dialysis. The patient continued to spike fever
+	   s so a work up was commenced that included a chest x ray, a TTE (since she has a
+	    murmur, although old) and more blood and urine cultures. All these studies were
+	    negative. As the patient continued to spike fevers and had one bout of emesis,
+	   another abdominal CT was obtained. It showed diverticulitis and so a 14 day cour
+	   se of flagyl and levofloxacin was started. It was decided that a general surgery
+	    consult would be obtained once she was an outpatient in order to faciliate rese
+	   ction of the affected length of bowel. At discharge, Ms. [**Known patient lastna
+	   me 46**] was instructed to continue her levo, flagyl, and vanco to complete a 14
+	    day course of each one. Her vanco levels were to be followed and redosed at HD.
+	   .2.	ESRD:  Ms. [**Known patient lastname 46**] usually dialyzes on Tues, Thurs,
+	    Sat but here she was switched to Monday, Wednesday and Saturday under the guida
+	   nce of the renal team. Her electrolytes were followed and repleted very consevat
+	   ively as needed. It was noted that her phosphate calcium product was quite high,
+	    so her sevelamer was titrate up. She was also placed on a renal diet. The patie
+	   nt reports making urine, however not an adequate measure of perfusion due to ESR
+	   D. She hopes to continue her peritoneal dialysis and felt were upset at having t
+	   o start HD. The method of dialysis was to be further addressed as an outpatient
+	   with her PCP [**Last Name (NamePattern4) **]. [**First Name (STitle) **], after
+	   her diverticular disease was resolved. .3.  DMII:  Ms. [**Known patient lastname
+	    46**] is usually on oral hypoglycemics. These oral agents were held due to thei
+	   r long half life and instead she was covered with RISS with QID finger sticks. H
+	   er home regimen of glipizide was restarted at discharge. While in house, she was
+	    on a controlled carbohydrate diet..4.  HTN:  Ms.[**Known patient lastname 53**]
+	    home regimen includes metoprolol, moexipril and diltiazem. Initially the metopr
+	   olol was continued and the diltiazem and moexipril were held since the patient i
+	   s currently not hypertensive. Before discharge, she was restarted on moexepril b
+	   ut not diltiazem. She was also started on an aspirin and atorvastatin before dis
+	   charge..5.  Afib:  The patient is on coumadin as outpatient for anticoagulation.
+	     This was hold anticoagulation in case she required urgent line placement.	Her
+	    rate was easily controlled with beta blocker. Before discharge, her coumadin wa
+	   s restarted, but very cautiously as it interacts with her 2 antibiotics for her
+	   diverticulitis, flagyl and levofloxacin. She was advised to have her INR followe
+	   d carefully and her warfarin titrated as needed for an INR [**12-24**]. .6.	CAD
+	    by hx (fixed perfusion defect) but clean coronaries by cath:  The patient was c
+	   ontinued on metoprolol but given her current anticoagulation status and possible
+	    need for urgent line placement the aspirin was held.  Her ACE inhibitor and sta
+	   tin were initially held and re-started later in her course. Medications on Admis
+	   sion:1.  Metoprolol 150mg TID2.  Diltiazem 360mg once daily3.  Glipizide 10mg BI
+	   D4.	Coumadin 2mg once daily5.  Sevelamer 800mg TID6.  Moexipril 7.5mg once dail
+	   y7.	Flagyl (completed course on [**2949-9-27**]) Discharge Medications:1. Warfa
+	   rin Sodium 2 mg Tablet Sig: One (1) Tablet PO HS (at bedtime).  2. Moexipril HCl
+	    7.5 mg Tablet Sig: One (1) Tablet PO DAILY (Daily).  3. Aspirin 325 mg Tablet S
+	   ig: One (1) Tablet PO DAILY (Daily).  4. Sevelamer HCl 800 mg Tablet Sig: One (1
+	   ) Tablet PO TID (3 times a day).  5. Vancomycin HCl 10 g Recon Soln Sig: One (1)
+	    Recon Soln Intravenous  QHD (each hemodialysis).  6. Levofloxacin 250 mg Tablet
+	    Sig: One (1) Tablet PO Q48H (every 48 hours) for 14 days.Disp:*7 Tablet(s)* Ref
+	   ills:*0*7. Metronidazole 500 mg Tablet Sig: One (1) Tablet PO TID (3 times a day
+	   ) for 14 days.Disp:*42 Tablet(s)* Refills:*0*8. Atorvastatin Calcium 20 mg Table
+	   t Sig: One (1) Tablet PO DAILY (Daily).  9. Docusate Sodium 100 mg Capsule Sig:
+	   One (1) Capsule PO BID (2 times a day).  10. Pantoprazole Sodium 40 mg Tablet, D
+	   elayed Release (E.C.) Sig: One (1) Tablet, Delayed Release (E.C.) PO Q24H (every
+	    24 hours).	11. Metoprolol Tartrate 50 mg Tablet Sig: Three (3) Tablet PO TID (
+	   3 times a day).  12. Glipizide 10 mg Tablet Sig: One (1) Tablet PO twice a day.
+	    13. comode	Sig: One (1)   as needed.  14. hospital bed1 bed for patient with C
+	   HF15. commode1 commode for patient with CHF16. shower chair1 shower chair for pa
+	   tient with CHF17. wheelchair1 wheelchair for patient with CHF18. Vancocin HCl 1,
+	   000 mg Recon Soln Sig: One (1)  Intravenous	QHD prn level < 15 for 7 days.	19.
+	    pulse oximetry please use for overnight oximetry on room air and record each mo
+	   rning. Discharge Disposition:Home with Service Discharge Diagnosis:diverticuliti
+	   schronic renal insufficiency with HD line sepsisanemiaCHFdiabetesCADatrial fibri
+	   llationrecurrent GIBcolonic ulcersgoutc.diff pancolitischolecystectomylaminectom
+	   yparotitisc section x 4 Discharge Condition:good Discharge Instructions:Please r
+	   estart your medications except for your diltiazem. [**Doctor First Name 54**] wi
+	   ll also be taking 2 new antibiotics for your diverticulitis.Weigh yourself every
+	    morning, [**Name8 (MD) 55**] MD if weight > 3 lbs.Adhere to 2 gm sodium dietFlu
+	   id Restriction: 1500 cc per dayPlease note, [**Doctor First Name **] should have
+	    your INR and vancomycin level checked at HD on Saturday. Your medications need
+	   to be adjusted accordingly. [**Doctor First Name 54**] will need to get vancomyc
+	   in at HD for the next 7 days each time your level is < 15 each time it is measur
+	   ed. It should be measured each time [**Doctor First Name **] go to HD. Since [**
+	   Doctor First Name **] will not be dialyzing until Saturday, please be especially
+	    careful with your diet and avoid excess fluid and potassium.Please call your do
+	   ctor [**First Name (Titles) 56**] [**Last Name (Titles) 57**] pain, fevers, chil
+	   ls, diarrhea, or constipation. Followup Instructions:Provider: [**Name10 (NameIs
+	   ) 58**] [**Last Name (NamePattern4) 59**], MD [**MD Number 60**]: LM [**Hospital
+	    Ward Name 61**] BUILDING TRANSPLANT CENTER Phone:[**Telephone/Fax (1) 62**] Dat
+	   e/Time:[**2949-10-27**] 9:30Provider: [**First Name8 (NamePattern2) **] [**Name1
+	   1 (NameIs) 63**], [**Name Initial (NameIs) **].D. [**MD Number 60**]: [**Hospita
+	   l6 64**] [**Hospital 65**] Phone:[**Telephone/Fax (1) 66**] Date/Time:[**2949-11
+	   -12**] 1:30Provider: [**Name10 (NameIs) 67**],[**Name11 (NameIs) 68**] TRANSPLAN
+	   T SOCIAL WORK Where: TRANSPLANT SOCIAL WORK Date/Time:[**2949-12-15**] 1:00Pleas
+	   e call your PCP: [**Name10 (NameIs) **],[**Name11 (NameIs) **] [**Name Initial (
+	   NameIs) **]. [**Telephone/Fax (1) 69**] for an appointment right after [**Holida
+	   y 70**].Please note, [**Doctor First Name **] should have your INR and vancomyci
+	   n level checked at HD. Your medications need to be adjusted accordingly, eg. [**
+	   Doctor First Name **] should receive 1000 mg of vancomycin for a level less than
+	    15 and [**Doctor First Name **] should increase your warfarin if the INR is les
+	   s than 2 and decrease it if the level is greater than 3. Your warfarin level wil
+	   l need to be checked 2-3 times per week while [**Doctor First Name **] are on th
+	   e metronidazole and levofloxacin because these antibiotics will increase your IN
+	   R.  * [**Doctor First Name **] were vaccinated with the pneumococcal vaccine but
+	    not the infuenza vaccine				  [**First Name11 (Name Pat
+	   tern1) **] [**Last Name (NamePattern1) 71**] MD [**MD Number 72**] Completed by:
+	    [**First Name11 (Name Pattern1) 73**] [**Last Name (NamePattern4) 74**] MD [**M
+	   D Number 75**] [**2949-10-10**] @ 1855Signed electronically by: DR. [**First Nam
+	   e (STitle) **] [**Doctor Last Name **] on: WED [**2949-10-15**] 9:19 PM(End of R
+	   eport)

@@ -4,7 +4,7 @@ dep = "HDLVEF"
 y = eval(parse(text=dep))
 
 
-filename = sprintf("%s/report/tex/table1_normal-%s.tex",path,tolower(dep)); 
+filename = sprintf("%s/report/table1_normal-%s.tex",path,tolower(dep)); 
 ff = file(filename,open="wt")
 
 line = sprintf(" & \\textbf{NLVEF} (N=%d) & \\textbf{HDLVEF} (N=%d) & $P$-value\\\\",sum(y==0),sum(y==1))
@@ -72,10 +72,9 @@ prop_analysis_p("SEPSIS",dep,ff,"~~Septic")
 writeLines(sprintf("Labs & ~ & ~ &\\\\"), ff)
 lapply(vars_labs,labs_analysis_p,dep,ff)
 
-# Treatments
-# fix proportions/numbers
+# Treatments - fix proportions/numbers
 writeLines(sprintf("Treatments & ~ & ~ &\\\\"), ff)
-lapply(vars_treat,treatment_analysis_p,dep,ff)
+lapply(vars_treat_prop,treatment_analysis_p,dep,ff)
 
 # Fluids
 cnt_analysis_p("FI_1D_ML",dep,ff,"~~IVF first 24hr (ml)")

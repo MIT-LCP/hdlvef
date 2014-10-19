@@ -1,0 +1,72 @@
+Admission Date:  [**3368-7-26**]		    Discharge Date:   [**3368-8-19*
+	   *] Date of Birth:  [**3321-10-31**]		   Sex:   F Service: OMED Allergies
+	   : Penicillins Attending:[**First Name3 (LF) 1053**] Chief Complaint:Presented to
+	    OSH with recently noticed easy bruising and fatigue. At OSH noted to have throm
+	   bocytopenia and rapidly elevating white count. Major Surgical or Invasive Proced
+	   ure:PICC lineTransesophageal echo  History of Present Illness:This is a 46yo wom
+	   an without significant past medical history who noted several weeks of easy brui
+	   sability and mild fatigue. She denies any fevers, sweats, chills, abdominal pain
+	    or any neurologic symptoms. She was admitted to an OSHon [**3368-7-21**] and wa
+	   s found at that time to have a platelet count of 22,000, white blood count of 4.
+	    She was felt to have presumed ITP and was started on a course of steroids. It w
+	   as noted over the last next several days to have a rapidly rising white count, a
+	   nd was transferred to [**Hospital1 19**] for workup of presumed acute leukemia.
+	   She has had no history of neurologic symptoms, visual changes, respiratory sympt
+	   oms or fever.  Past Medical History:Hysterectomy for uterine fibroid ~2000. Tons
+	   illectomy in her mid 20s.  She has a history of a mild rash on the arm after tak
+	   ing penicillin as a teenager. No other drug allergies.  Social History:Ms. [**Kn
+	   own patient lastname 1054**] lives in [**Location 1055**], NH. She works as an o
+	   ffice worker. She has been married for 14 years and has two children ages 11 and
+	    12. She does not smoke and drinks only occasional alcohol.	 Family History:She
+	    has a history of multiple myeloma in her father and smoldering disease for many
+	    years.  Mother recently died. She has two siblings.  Physical Exam:PHYSICAL EXA
+	   MINATION: GENERAL: Well-appearing woman in no acute distress. HEENT: No orophary
+	   ngeal lesions, no oral petechia, no sinus tenderness. NECK: Supple without lymph
+	   adenopathy. CHEST: Clear. CARDIAC: Regular rate and rhythm, [**2-26**] flow murm
+	   ur, no rubs, no gallops. ABDOMEN: Soft, nontender without hepatosplenomegaly. EX
+	   TREMITIES: Multiple bruising up and down in the lower extremities. 2cm X 2cm ind
+	   urated area at medial LUE, non tender, nonerythematous, at former PICC insertion
+	    sight. NEUROLOGIC: CN II-XII intact.  Full strength, reflexes, and sensation th
+	   roughout.SKIN: Light, blanchable, non-raised erythematous rash on LUE, thighs b/
+	   l, abdomen, and back.  Multiple circlular erythematous papules on wrists b/l. Pe
+	   rtinent Results:[**3368-7-26**] 04:40PM   WBC-45.6* RBC-3.41* HGB-10.6* HCT-28.6
+	   * MCV-84 MCH-31.1 MCHC-37.1* RDW-15.1[**3368-7-26**] 04:40PM   NEUTS-5* BANDS-0
+	   LYMPHS-4* MONOS-1* EOS-0 BASOS-0 ATYPS-0 METAS-0 MYELOS-1* PROMYELO-0 BLASTS-89*
+	    OTHER-0[**3368-7-26**] 04:40PM   PLT SMR-VERY LOW PLT COUNT-36*[**3368-7-26**]
+	   04:40PM   PT-16.0* PTT-21.5* INR(PT)-1.7[**3368-7-26**] 04:40PM   FIBRINOGE-67*
+	   D-DIMER-3506*[**3368-7-26**] 04:40PM   [**Last Name (un) 1056**] CT-273* Brief H
+	   ospital Course:The patient was admitted and diagnosed with acute promyelocytic l
+	   eukemia. During the first days of her hospitalization, she developed DIC, requir
+	   ing blood product support.  Shortly after starting chemotherapy she had transami
+	   nitis which resolved but required decreased dosing of chemotherapy early in the
+	   course. The hospitalization was complicated by an episode of hematuria followed
+	   by acute abdominal pain.  CT at the time showed right hydronephrosis and hydrour
+	   eter with some pelvic fluid and suggestion of right renal forniceal rupture, lik
+	   ely due to a recently passed stone, clot, or sludge.  This resolved without inte
+	   rvention and follow up CT showed hydronephrosis was resolving.  The patient deve
+	   loped recurrent fevers approximately day 15 and was treated empirically with cef
+	   epime, ambisome, vancomycin, and acyclovir.	After developing a drug rash, cefep
+	   ime was discontinued and the rash resolved.	Around the time of rash, Mrs. [**Kn
+	   own patient lastname 1054**] also developed raised erythematous papules on her w
+	   rists and palms which dermatology biopsied and determined to be part of the drug
+	    reaction.  Work up of fever included ultrasound of former LUE PICC site, CT of
+	   chest, sinus, abdomen/pelvis, MRI of abdomen, TTE, TEE, and multiple blood and u
+	   rine cultures - all were negative.  It was therefore determined that the fevers
+	   were a reaction to ATRA.  Antibiotics were dicontinued, followed by Ambisome aft
+	   er a negative liver MRI, and Mrs. [**Known patient lastname 1054**] was treated
+	   with Decadron for the ATRA reaction.  Fevers resolved and Mrs. [**Known patient
+	   lastname 1054**] was discharged home to continue her treatment. Medications on A
+	   dmission:Flonase[**Doctor First Name 912**] Discharge Medications:ATRA 40 mg po
+	   bidFamvir 500 mg po bidDecadron Discharge Disposition:Home Discharge Diagnosis:A
+	   cute Promyelocytic Leukemia Discharge Condition:Pt is afebrile, asymptomatic, an
+	   d ambulating easily. Discharge Instructions:Please contact Dr. [**First Name (ST
+	   itle) 1057**] if [**Doctor First Name **] develop a fever.  Take your temperatur
+	   e in the early evening, at bed time, and if [**Doctor First Name **] feel warm.
+	   Followup Instructions:Please see Dr. [**First Name (STitle) 1057**] on Tuesday,
+	   [**3368-8-23**], at your scheduled appointment.				[**
+	   First Name11 (Name Pattern1) 15**] [**Last Name (NamePattern4) 1058**] MD [**MD
+	   Number 855**] Completed by: [**First Name8 (NamePattern2) 1059**] [**Last Name (
+	   NamePattern1) 1060**] MD [**MD Number 1061**] [**3368-8-20**] @ 1830Signed elect
+	   ronically by: DR. [**First Name11 (Name Pattern1) 15**] [**Initial (NamePattern1
+	   ) **] [**Last Name (NamePattern4) **] on: FRI [**3368-9-30**] 6:39 PM(End of Rep
+	   ort)

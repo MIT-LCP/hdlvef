@@ -1,5 +1,5 @@
 drop table hyperdynamic_final;
-create table hyperdynamic_final as
+--create table hyperdynamic_final as
 
 with creatinine as (
   select distinct eo.icustay_id, 
@@ -46,16 +46,51 @@ with creatinine as (
 --select * from heartrate;
 
 , assemble as (
-  select ec.*,
+  select ec.subject_id,
+    ec.icustay_id,
+    ec.age,
+    ec.gender,
+    ec.careunit,
+    ec.sofa,
+    ec.sapsi,
+    ec.icu_los,
+    ec.hosp_los,
+    ec.lvef_group,
+    ec.hdlvef,
+    ec.echo_dt,
+    ec.sepsis,
+    ec.cm_diabetes,
+    ec.cm_chf,
+    ec.cm_alcohol_abuse,
+    ec.cm_arrhythmias,
+    ec.cm_valvular_disease,
+    ec.cm_hypertension,
+    ec.cm_renal_failure,
+    ec.cm_chronic_pulmonary,
+    ec.cm_liver_disease,
+    ec.cm_cancer,
+    ec.cm_psychosis,
+    ec.cm_depression,
+    ec.elix_28d_pt,
+    ec.elix_1yr_pt,
+    ec.survival_days,
+    ec.mortality_28d,
+    ec.one_year_mortality,
+    ec.icustay_mortality,
+    ec.hospital_mortality,
+    case 
+      when vs.no_vasopressors is null then 0
+      else 1 
+    end as vasopressor,
+    case 
+      when vs.vasopressor_adjusteddose is null then 0
+      else vs.vasopressor_adjusteddose 
+    end as vasopressor_adjusteddose,
+    case
+      when vs.no_vasopressors is null then 0
+      else vs.no_vasopressors 
+    end as no_vasopressors,
     et.rrt,
-    et.vasopressor,
-    et.dobutamine,
-    et.dopamine,
-    et.epinephrine,
-    et.vasopressin,
-    et.levophed,
-    et.milrinone,
-    et.neosynephrine,
     et.ventilated,
     et.fi_1d_ml,
     et.fo_1d_ml,
@@ -69,6 +104,7 @@ with creatinine as (
     hr.hr
   from tbrennan.hyperdynamic_cohort ec
   left join tbrennan.hyperdynamic_treatments et on ec.icustay_id = et.icustay_id
+  left join tbrennan.hyperdynamic_vasopressors vs on vs.icustay_id = ec.icustay_id
   left join creatinine ct on ct.icustay_id = ec.icustay_id
   left join wbc wt on wt.icustay_id = ec.icustay_id
   left join lactate lt on lt.icustay_id = ec.icustay_id

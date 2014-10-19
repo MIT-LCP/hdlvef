@@ -206,6 +206,33 @@ treatment_analysis_p = function(var, dep, ff) {
   writeLines(line,ff)
 }
 
+vasopressor_analysis_p = function(var, dep, ff) {
+  
+  x = eval(parse(text=var))
+  y = eval(parse(text=dep))
+  m = aggregate(VASOPRESSORS[var],VASOPRESSORS[dep],median,na.rm=T)
+  s = aggregate(VASOPRESSORS[var],VASOPRESSORS[dep],quantile,na.rm=T)
+  #tt = t.test(x~y)
+  tt = wilcox.test(x~y,conf.int=T)
+  label = gsub("_"," ",tolower(var))
+  if (label == 'vasopressor adjusteddose') {
+    label = 'Adjusted Vasopressor Dose*'
+  } else if (label == 'no vasopressors') {
+    label = 'No. Vasopressors'
+  } else label = tolower(var)
+  
+  line = sprintf('%s&%.2f (%.2f - %.2f)&%.2f (%.2f - %.2f)',label,
+                 m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
+  if (tt$p.value<0.01) {
+    line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,tt$p.value)
+  } else if (tt$p.value<0.05) {
+    line = sprintf('%s&\\textbf{%.2f}\\\\',line,tt$p.value)
+  } else {
+    line = sprintf('%s&%.1f\\\\',line,tt$p.value)
+  }
+  writeLines(line, ff)
+}
+
 elix_analysis = function(var, dep, ff) {
   x = eval(parse(text=var))
   y = eval(parse(text=dep))

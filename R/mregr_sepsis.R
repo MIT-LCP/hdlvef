@@ -1,10 +1,10 @@
 SEPSIS = subset(COHORT,COHORT$SEPSIS==1)
 
-ff = file(sprintf("%s/report/tex/table3_sepsis_regression.tex",path),open="wt")
+ff = file(sprintf("%s/report/table3_sepsis_regression.tex",path),open="wt")
 writeLines("~ & Odds-ratio (95\\% Confidence Interval) & \\textbf{P-value}\\\\ \\hline",ff)
 
 # LOGISTIC REGRESSION
-mylogit = glm(MORTALITY_28D ~ AGE + GENDER + ELIX_28D_PT + SAPSI + VASOPRESSOR + HDLVEF,data=SEPSIS,family="binomial")
+mylogit = glm(MORTALITY_28D ~ AGE + GENDER + ELIX_28D_PT + SAPSI + VASOPRESSOR_ADJUSTEDDOSE + HDLVEF,data=SEPSIS,family="binomial")
 # Coefficients of Logistic Regression
 cfs = summary(mylogit)$coefficients
 # Odds Ration and Confidence Intervals
@@ -15,7 +15,7 @@ for ( j in seq(2,nrow(or)) ) {
   if (cfs[j,4]<0.001) {
     line = sprintf('%s&\\textbf{$<$0.001}\\\\',line)
   } else if (cfs[j,4]<0.01) {
-    line = sprintf('%s&\\textbf{%.3f}\\\\',line)
+    line = sprintf('%s&\\textbf{%.3f}\\\\',line,cfs[j,4])
   } else if (cfs[j,4]<0.05) {
     line = sprintf('%s&\\textbf{%.2f}\\\\',line,cfs[j,4])
   } else {
