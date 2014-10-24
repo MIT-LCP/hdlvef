@@ -2,7 +2,7 @@ drop table hyperdynamic_outcomes;
 create table hyperdynamic_outcomes as 
 
 -- createnin
-with creatinin as (
+with creatinin_raw as (
   select distinct fc.icustay_id,
     --min(lb.valuenum) over (partition by fc.icustay_id) creat_min,
     --max(lb.valuenum) over (partition by fc.icustay_id) creat_max,
@@ -22,7 +22,7 @@ with creatinin as (
 
 
 -- white bloodcell count
-, wbc as (
+, wbc_raw as (
   select distinct fc.icustay_id,
     --min(lb.valuenum) over (partition by fc.icustay_id) wbc_min,
     --max(lb.valuenum) over (partition by fc.icustay_id) wbc_max,
@@ -41,7 +41,7 @@ with creatinin as (
 --select * from wbc;
 
 -- lactate
-, lactate as (
+, lactate_raw as (
   select distinct fc.icustay_id,
     --min(lb.valuenum) over (partition by fc.icustay_id) lactate_min,
     --max(lb.valuenum) over (partition by fc.icustay_id) lactate_max,
@@ -60,31 +60,12 @@ with creatinin as (
 --select * from lactate;
 
 
--- %%%%%%%%%%%%%% HEART RATE
-, heartrate as (
-  select fc.icustay_id,
-      extract(day from ce.charttime - fc.icustay_intime)*1440 + extract(hour from ce.charttime - fc.icustay_intime)*60 + extract(minute from ce.charttime - fc.icustay_intime) dt,
-      ce.value1num value,
-      4 as data_type
-    from tbrennan.hyperdynamic_cohort fc 
-    left join mimic2v26.chartevents ce
-      on ce.icustay_id = fc.icustay_id
-      and ce.itemid in (211)
-      and ce.value1num <> 0
-      and ce.value1num is not null
-      and ce.charttime between fc.icustay_intime and fc.icustay_intime + 3
-)
---select * from heartrate;
-
-
 , assemble as (
   select * from creatinin
     union
   select * from wbc
     union
   select * from lactate
-    union
-  select * from heartrate
     
 )
 select * from assemble;

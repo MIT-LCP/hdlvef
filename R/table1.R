@@ -9,7 +9,7 @@ ff = file(filename,open="wt")
 
 line = sprintf(" & \\textbf{NLVEF} (N=%d) & \\textbf{HDLVEF} (N=%d) & $P$-value\\\\",sum(y==0),sum(y==1))
 writeLines(line,ff)
-writeLines(' & \\multicolumn{2}{c}{N (\\%) or median (IQR)} & \\\\ \\hline',ff)
+writeLines(' & \\multicolumn{2}{c}{N (\\%) or median [IQR]} & \\\\ \\hline',ff)
 
 # AGE
 cnt_analysis_p("AGE",dep,ff,"Age")
@@ -43,11 +43,6 @@ if (fs$p.value<0.01) {
 } else {
   line = sprintf('%s& ~ & ~ & %.1f\\\\',line,fs$p.value)
 }
-# if (fs$p.value<0.05) {
-#   line = paste(line,'\\textbf{*} & ~ & ~\\\\',sep='')
-# } else {
-#   line = paste(line,'& ~ & ~\\\\',sep='')
-# }
 writeLines(line,ff)
 for ( j in seq(1,length(ll)) ) {
   line = sprintf('~~%s&%d (%.0f \\%s)&%d (%.0f \\%s)&\\\\',ll[j],
@@ -63,18 +58,22 @@ cnt_analysis_p("ECHO_DT",dep,ff,"Time to echo (days)")
 writeLines("\\multicolumn{3}{l}{Co-morbidities by ICD9 \\& DRG Codes}\\\\",ff);
 lapply(vars_elix_cm,elix_analysis_p,dep,ff)
 
-# SAPS
+# SOFA
 writeLines("Illness & ~ & ~ &\\\\",ff);
-cnt_analysis_p("SAPSI",dep,ff,"~~SAPS-I")
+cnt_analysis_p("SOFA",dep,ff,"~~SOFA")
 prop_analysis_p("SEPSIS",dep,ff,"~~Septic")
 
+# Vital Signs
+writeLines(sprintf("Vital Signs & ~ & ~ &\\\\"), ff)
+lapply(vars_vitals,vitals_analysis_p,dep,ff)
+
 # Labs
-writeLines(sprintf("Labs & ~ & ~ &\\\\"), ff)
+writeLines(sprintf("Lab Results & ~ & ~ &\\\\"), ff)
 lapply(vars_labs,labs_analysis_p,dep,ff)
 
 # Treatments - fix proportions/numbers
 writeLines(sprintf("Treatments & ~ & ~ &\\\\"), ff)
-lapply(vars_treat_prop,treatment_analysis_p,dep,ff)
+lapply(vars_treat,treatment_analysis_p,dep,ff)
 
 # Fluids
 cnt_analysis_p("FI_1D_ML",dep,ff,"~~IVF first 24hr (ml)")

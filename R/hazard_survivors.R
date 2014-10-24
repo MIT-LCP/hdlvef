@@ -1,4 +1,4 @@
-SURVIVORS = subset(COHORT,COHORT$MORTALITY_28D==0)
+attach(SURVIVORS)
 
 ff = file(sprintf("%s/report/table4_coxmodel_survivors-1yr.tex",path),open="wt")
 writeLines("~ & Hazard ratio (95\\% Confidence Interval) & \\textbf{P-value}\\\\ \\hline",ff)
@@ -14,7 +14,10 @@ writeLines("~ & Hazard ratio (95\\% Confidence Interval) & \\textbf{P-value}\\\\
 #abline(lm(SURVIVORS$ELIX_1YR_PT~SURVIVORS$SURVIVAL_DAYS),col="red")
 
 # COX REGRESSION - with time dependency correction for elixhauser points
-cox.model = coxph(Surv(ONE_YEAR_MORTALITY) ~ AGE + GENDER + SAPSI + VASOPRESSOR_ADJUSTEDDOSE + HDLVEF + tt(ELIX_1YR_PT),
+regres_labels = c("Age","Gender (Male)","Elixhauser Score","SOFA","Ventilated",
+                  "Max Adjusted Vasopressor Dose","HDLVEF")
+cox.model = coxph(Surv(ONE_YEAR_MORTALITY) ~ AGE + GENDER + tt(ELIX_1YR_PT) + SOFA + 
+                    VENTILATED + MAX_VASOPRESSOR_ADJUSTEDDOSE + HDLVEF,
                   data=SURVIVORS,tt=function(x,t,...) x-lm(x~t)$coeff[2]*t)
 s = summary(cox.model)
 cfs = s$coefficients;
@@ -32,4 +35,7 @@ for ( j in seq(1,nrow(s$conf.int)) ) {
   }
   writeLines(line,ff)
 }
+
 close(ff)
+
+detach(SURVIVORS)
