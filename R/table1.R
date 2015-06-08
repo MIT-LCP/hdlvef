@@ -4,8 +4,8 @@ dep = "HDLVEF"
 y = eval(parse(text=dep))
 
 
-#filename = sprintf("%s/report/table1_normal-%s.tex",path,tolower(dep)); 
-filename = sprintf("%s/report/table1_normal-control.tex",path); 
+filename = sprintf("%s/report/table1_normal-%s.tex",path,tolower(dep)); 
+#filename = sprintf("%s/report/table1_normal-control.tex",path); 
 ff = file(filename,open="wt")
 
 line = sprintf(" & \\textbf{NLVEF} (N=%d) & \\textbf{HDLVEF} (N=%d) & $P$-value\\\\",sum(y==0),sum(y==1))

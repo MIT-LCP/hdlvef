@@ -58,7 +58,7 @@ with adult_adm as (
     from icu_echos ie
     join adult_adm aa 
        on aa.icustay_id = ie.icustay_id
-    join drgcodes drg
+    left join drgcodes drg
       on aa.subject_id = drg.subject_id and aa.hadm_id = drg.hadm_id
     where aa.careunit <> 'CCU'
       and aa.careunit <> 'CSRU'

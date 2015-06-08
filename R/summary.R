@@ -74,6 +74,7 @@ COHORT = DATA
 SURVIVORS = subset(COHORT,MORTALITY_28D==0)
 VASOPRESSORS = subset(COHORT,VASOPRESSOR==1)
 
+
 #-------------------------------------------------------------------------
 # TABLE 1.A - NORMAL VS. HYPERDYNAMIC
 source(paste(path,'R/table1.R',sep='/'))
