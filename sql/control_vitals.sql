@@ -1,5 +1,5 @@
-drop table hyperdynamic_vitals;
-create table hyperdynamic_vitals as 
+drop table hdlvef_control_vitals;
+create table hdlvef_control_vitals as 
 
 -------- HR --------
 with hr_data as (
@@ -7,10 +7,9 @@ with hr_data as (
 		ec.icustay_id
 		, ch.charttime
 		, ch.value1num as hr
-    , extract(day from ch.charttime - ec.icustay_intime) day
 
 	 from 
-	 	echo_cohort ec 
+	 	tbrennan.hyperdynamic_control ec 
 	 
 	 left join 
 	 	mimic2v26.chartevents ch on ec.icustay_id = ch.icustay_id 
@@ -21,29 +20,17 @@ with hr_data as (
     and ch.value1num is not null
 
 )
---select * from hr_data;
-
-, hr_median_d1 as (
- 	select distinct 
- 		icustay_id
-    , median(hr) over (partition by icustay_id) as hr_median_d1
-  from 
-    hr_data
-  where day = 0
-)
 
 , hr_final as (
  	select distinct 
- 		hd.icustay_id
- 		, first_value(hd.hr) over (partition by hd.icustay_id order by hd.charttime asc) as hr_1st
- 		, first_value(hd.hr) over (partition by hd.icustay_id order by hd.hr asc) as hr_lowest
- 		, first_value(hd.hr) over (partition by hd.icustay_id order by hd.hr desc) as hr_highest
-    , hd1.hr_median_d1
+ 		icustay_id
+ 		, first_value(hr) over (partition by icustay_id order by charttime asc) as hr_1st
+ 		, first_value(hr) over (partition by icustay_id order by hr asc) as hr_lowest
+ 		, first_value(hr) over (partition by icustay_id order by hr desc) as hr_highest
+ 	
  	from 
- 		hr_data hd
-  join hr_median_d1 hd1 on hd1.icustay_id = hd.icustay_id
+ 		hr_data
  )
---select * from hr_final;
 
 -------- MAP --------
 , bp_data as (
@@ -53,7 +40,7 @@ with hr_data as (
 		, ch.value1num as mbp
 
 	 from 
-	 	echo_cohort ec 
+	 	tbrennan.hyperdynamic_control ec 
 	 
 	 left join 
 	 	mimic2v26.chartevents ch on ec.icustay_id = ch.icustay_id 
@@ -86,7 +73,7 @@ with hr_data as (
       end as temp
 
 	 from 
-	 	echo_cohort ec 
+	 	tbrennan.hyperdynamic_control ec 
 	 
 	 left join 
 	 	mimic2v26.chartevents ch on ec.icustay_id = ch.icustay_id 
@@ -116,7 +103,6 @@ select distinct
 	, hr.hr_1st
 	, hr.hr_lowest
 	, hr.hr_highest
-  , hr.hr_median_d1
 	, bp.map_1st
 	, bp.map_lowest
 	, bp.map_highest
@@ -125,7 +111,7 @@ select distinct
 	, t.temp_highest
 
 from 
-	echo_cohort ec
+	tbrennan.hyperdynamic_control ec
 
 left join 
 	hr_final hr on hr.icustay_id = ec.icustay_id

@@ -16,8 +16,8 @@ rm(list=ls())
 # P-values to table 1
 
 ## INPUT DATA
-filename = c("data/echo_final.csv")
-path = c("/Users/tpb/Research/hdlvef")
+filename = c("data/export-20150608.csv")
+path = c("/Users/tpb/Work/hdlvef")
 DATA = read.csv(paste(path,filename,sep="/"))
 
 names(DATA)
@@ -57,9 +57,9 @@ vars_elix_cm = c("CM_DIABETES","CM_ALCOHOL_ABUSE","CM_ARRHYTHMIAS",
               "CM_VALVULAR_DISEASE","CM_HYPERTENSION","CM_RENAL_FAILURE",
               "CM_CHRONIC_PULMONARY","CM_LIVER_DISEASE","CM_CANCER","CM_PSYCHOSIS",   
               "CM_DEPRESSION","CM_CHF")
-vars_treat = c("VASOPRESSOR","RRT","VENTILATED")
+vars_treat = c("VASOPRESSOR","DOBUTAMINE_FLG", "RRT","VENTILATED")
 vars_regres = c("AGE","GENDER","ELIX_28D_PT","SOFA","VENTILATED","ADJUSTED_VASOPRESSORDOSE","HDLVEF")
-vars_vitals = c("HR_HIGHEST","MAP_LOWEST","TEMP_HIGHEST")
+vars_vitals = c("HR_HIGHEST","HR_MEDIAN_D1","MAP_LOWEST","TEMP_HIGHEST")
 vars_vasopressors = c("VASOPRESSOR_DT","NO_VASOPRESSORS","MAX_VASOPRESSOR_ADJUSTEDDOSE","AUC_VASOPRESSOR_DOSE")
 lvef_labels = c("LVEF $<$ 35\\%","35\\% $<$ LVEF $<$ 55\\%","NLVEF ($>$55\\%)","HDLVEF ($>$75\\%)")
 
@@ -69,7 +69,8 @@ source(paste(path,'R/analysis.R',sep='/'))
 
 #-------------------------------------------------------------------------
 # COHORTS
-COHORT = subset(DATA,(DATA$LVEF_GROUP==3 | DATA$LVEF_GROUP==4))
+COHORT = DATA
+#COHORT = subset(DATA,(DATA$LVEF_GROUP==3 | DATA$LVEF_GROUP==4))
 SURVIVORS = subset(COHORT,MORTALITY_28D==0)
 VASOPRESSORS = subset(COHORT,VASOPRESSOR==1)
 
@@ -77,22 +78,21 @@ VASOPRESSORS = subset(COHORT,VASOPRESSOR==1)
 # TABLE 1.A - NORMAL VS. HYPERDYNAMIC
 source(paste(path,'R/table1.R',sep='/'))
 
-#-------------------------------------------------------------------------
-# TABLE 2: HYPERDYNAMIC - LOGISTIC REGRESSION MODEL
-source(paste(path,'R/mregr_hdlvef.R',sep='/'))
-source(paste(path,'R/mregr_hdlvef_vasopressor.R',sep='/'))
-source(paste(path,'R/mregr_hdlvef_auc_vasopressor.R',sep='/'))
-source(paste(path,'R/mregr_hdlvef_no_vasopressor.R',sep='/'))
 
 #-------------------------------------------------------------------------
-# TABLE 3: HYPERDYNAMIC & SEPSIS - LOGISTIC REGRESSION MODEL
-source(paste(path,'R/mregr_sepsis.R',sep='/'))
+# TABLE 2 - NORMAL VS. HYPERDYNAMIC
+source(paste(path,'R/table1_drgcodes.R',sep='/'))
+
+
+#-------------------------------------------------------------------------
+# TABLE: HYPERDYNAMIC - LOGISTIC REGRESSION MODEL
+source(paste(path,'R/mregr_hdlvef.R',sep='/'))
+source(paste(path,'R/mregr_hdlvef_vasopressor.R',sep='/'))
+source(paste(path,'R/mregr_hdlvef_no_vasopressor.R',sep='/'))
+source(paste(path,'R/mregr_hdlvef_vasopressor_duration.R',sep='/'))
 
 #-------------------------------------------------------------------------
 # TABLE 4: HYPERDYNAMIC COX REGRESSION MODEL of ONE-YEAR MORTALITY
 source(paste(path,'R/hazard_survivors.R',sep='/'))
 
-#-------------------------------------------------------------------------
-# TABLE 5: VASOPRESSORS
-source(paste(path,'R/vasopressor.R',sep='/'))
 

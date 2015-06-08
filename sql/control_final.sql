@@ -1,5 +1,5 @@
-drop table hyperdynamic_final;
-create table hyperdynamic_final as
+drop table hdlvef_control_final;
+--create table hdlvef_control_final as
 
 
 select ec.subject_id
@@ -7,14 +7,10 @@ select ec.subject_id
     , ec.age
     , ec.gender
     , ec.careunit
-    , ec.drgcode
     , ec.sofa
     , ec.sapsi
     , ec.icu_los
     , ec.hosp_los
-    , ec.lvef_group
-    , ec.hdlvef
-    , ec.echo_dt
     , ec.sepsis
     , ec.cm_diabetes
     , ec.cm_chf
@@ -54,7 +50,6 @@ select ec.subject_id
     , round(extract(day from et.start_pressors - ec.icustay_intime) +
         extract(hour from et.start_pressors - ec.icustay_intime)/24 +
         extract(minute from et.start_pressors - ec.icustay_intime)/1440,4) vasopressor_dt
-    , et.dobutamine_flg
     , et.rrt
     , et.ventilated
     , et.fi_1d_ml
@@ -70,7 +65,6 @@ select ec.subject_id
     , vs.hr_1st
     , vs.hr_lowest
     , vs.hr_highest
-    , vs.hr_median_d1
     , vs.map_1st
     , vs.map_lowest
     , vs.map_highest
@@ -78,9 +72,9 @@ select ec.subject_id
     , vs.temp_lowest
     , vs.temp_highest
   
-  from tbrennan.hyperdynamic_cohort ec
-  left join tbrennan.hyperdynamic_treatments et on ec.icustay_id = et.icustay_id
-  left join tbrennan.hyperdynamic_labs lb on lb.icustay_id = ec.icustay_id
-  left join tbrennan.hyperdynamic_vitals vs on vs.icustay_id = ec.icustay_id
+  from tbrennan.hyperdynamic_control ec
+  left join tbrennan.hdlvef_control_treatments et on ec.icustay_id = et.icustay_id
+  left join tbrennan.hdlvef_control_labs lb on lb.icustay_id = ec.icustay_id
+  left join tbrennan.hdlvef_control_vitals vs on vs.icustay_id = ec.icustay_id
 
 ;

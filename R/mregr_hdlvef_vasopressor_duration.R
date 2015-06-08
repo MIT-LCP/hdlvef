@@ -1,11 +1,11 @@
-ff = file(sprintf("%s/report/table2_regression-%s.tex",path,tolower(dep)),open="wt")
+ff = file(sprintf("%s/report/table2_regression-%s_vasopressor_duration.tex",path,tolower(dep)),open="wt")
 writeLines("~ & Odds-ratio (95\\% Confidence Interval) & $P$-value\\\\ \\hline",ff)
 
 # LOGISTIC REGRESSION
 regres_labels = c("Age","Gender (Male)","Elixhauser Score","SOFA","Ventilated",
-                  "Max Vasopressor Dose","Median HR Day1","HDLVEF")
+                  "Vasopressor Duration","HDLVEF")
 mylogit = glm(MORTALITY_28D ~ AGE + GENDER + ELIX_28D_PT + SOFA + 
-              VENTILATED + MAX_VASOPRESSOR_ADJUSTEDDOSE + HR_MEDIAN_D1 + HDLVEF,
+              VENTILATED + VASOPRESSOR_DURATION + HDLVEF,
               data=COHORT,family="binomial")
 # Coefficients of Logistic Regression
 cfs = summary(mylogit)$coefficients

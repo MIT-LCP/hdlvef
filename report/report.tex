@@ -224,15 +224,15 @@ Table~\ref{tbl:sepsis_icd9} is inconclusive.
 \label{tbl:hypers}
 \end{table}
 
-%\begin{table}[h]
-%\begin{tabular}{l c c c}
-%\toprule
-%\input{table1_normal-hdlvef_parts.tex}
-%\bottomrule
-%\end{tabular}
-%\caption{Characteristics of normal versus all HDLVEF patients}
-%\label{tbl:hypers}
-%\end{table}
+\begin{table}[h]
+\begin{tabular}{l c c c}
+\toprule
+\input{table1_tte.tex}
+\bottomrule
+\end{tabular}
+\caption{Characteristics of patients who did and did not receive an transthorasic echocardiograph (TTE)}
+\label{tbl:hypers}
+\end{table}
 
 %\begin{table}[h]
 %\begin{tabular}{l c c c}
@@ -250,7 +250,7 @@ Table~\ref{tbl:sepsis_icd9} is inconclusive.
 \input{table2_regression-hdlvef.tex}
 \bottomrule
 \end{tabular}
-\caption{Multivariate logistic regression model predicting 28-day mortality for all patients}
+\caption{Multivariate logistic regression model predicting 28-day mortality for all patients with max vasopressor dose}
 \label{tbl:all-comorb}
 \end{table}
 
@@ -260,7 +260,7 @@ Table~\ref{tbl:sepsis_icd9} is inconclusive.
 \input{table2_regression-hdlvef_vasopressor.tex}
 \bottomrule
 \end{tabular}
-\caption{Multivariate logistic regression model predicting 28-day mortality for all patients}
+\caption{Multivariate logistic regression model predicting 28-day mortality for all patients with vasopressor use}
 \label{tbl:all-comorb}
 \end{table}
 
@@ -270,29 +270,29 @@ Table~\ref{tbl:sepsis_icd9} is inconclusive.
 \input{table2_regression-hdlvef_no_vasopressors.tex}
 \bottomrule
 \end{tabular}
-\caption{Multivariate logistic regression model predicting 28-day mortality for all patients}
+\caption{Multivariate logistic regression model predicting 28-day mortality for all patients with number of vasopessors}
 \label{tbl:all-comorb}
 \end{table}
 
 \begin{table}[h]
 \begin{tabular}{l c c}
 \toprule
-\input{table2_regression-hdlvef_auc_vasopressor.tex}
+\input{table2_regression-hdlvef_vasopressor_duration.tex}
 \bottomrule
 \end{tabular}
-\caption{Multivariate logistic regression model predicting 28-day mortality for all patients}
+\caption{Multivariate logistic regression model predicting 28-day mortality for all patients with vasopressor duration}
 \label{tbl:all-comorb}
 \end{table}
 
-\begin{table}[t]
-\begin{tabular}{l c c c}
-\toprule
-\input{table3_sepsis_regression.tex}
-\bottomrule
-\end{tabular}
-\caption{Multivariate logistic regression model predicting 28-day mortality for septic patients}
-\label{tbl:acute-charac}
-\end{table}
+% \begin{table}[t]
+% \begin{tabular}{l c c c}
+% \toprule
+% \input{table3_sepsis_regression.tex}
+% \bottomrule
+% \end{tabular}
+% \caption{Multivariate logistic regression model predicting 28-day mortality for septic patients}
+% \label{tbl:acute-charac}
+% \end{table}
 
 \begin{table}[h]
 \begin{tabular}{l c c}
@@ -304,15 +304,15 @@ Table~\ref{tbl:sepsis_icd9} is inconclusive.
 \label{tbl:all-comorb}
 \end{table}
 
-\begin{table}
-\begin{tabular}{l c c c}
-\toprule
-\input{table5_vasopressors-hdlvef.tex}
-\bottomrule
-\end{tabular}
-\caption{Vasopressor use between normal versus hyperdynamic EF patients}
-\label{tbl1:hypers}
-\end{table}
+% \begin{table}
+% \begin{tabular}{l c c c}
+% \toprule
+% \input{table5_vasopressors-hdlvef.tex}
+% \bottomrule
+% \end{tabular}
+% \caption{Vasopressor use between normal versus hyperdynamic EF patients}
+% \label{tbl1:hypers}
+% \end{table}
 
 
 %% The Appendices part is started with the command \appendix;

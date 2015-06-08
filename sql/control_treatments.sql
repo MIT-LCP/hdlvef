@@ -1,5 +1,5 @@
-drop table hyperdynamic_treatments;
-create table hyperdynamic_treatments as
+drop table hdlvef_control_treatments;
+create table hdlvef_control_treatments as
 
 with ventilated as (
   select distinct 
@@ -7,7 +7,7 @@ with ventilated as (
     , 1 ventilated
 
   from 
-    tbrennan.hyperdynamic_cohort fc
+    tbrennan.hyperdynamic_control fc
 
   left join 
     mimic2v26.chartevents ce
@@ -55,7 +55,7 @@ with ventilated as (
       end as on_vasopressors
   
   from 
-    tbrennan.hyperdynamic_cohort cd
+    tbrennan.hyperdynamic_control cd
   
   join 
     mimic2v26.medevents m on cd.icustay_id = m.icustay_id 
@@ -115,8 +115,7 @@ with ventilated as (
         + extract(minute from vt.last_pressortime - vt.first_pressortime)/60 dose_duration
     , vd.max_dose
     , vd.avg_dose
-    , case when vt.vasopressor like 'DOBUTAMINE' then 1 else 0 end as dobutamine
-
+    
   from 
     vasopressor_timings vt
     
@@ -160,7 +159,6 @@ with ventilated as (
     , max(start_pressors) start_pressors
     , sum(vt.dose_duration) vasopressor_duration
     , round(sum(vt.max_dose),4) max_adjusteddose
-    , sum(dobutamine) dobutamine_flg
   
   from vasopressor_therapy vt
   
@@ -173,7 +171,7 @@ with ventilated as (
 , fluids_in_72 as (
   select distinct fc.icustay_id,
     round(sum(tb.cumvolume) over (partition by fc.icustay_id),2) fi_3d_ml
-  from tbrennan.echo_cohort fc
+  from tbrennan.hyperdynamic_control fc
   left join mimic2v26.totalbalevents tb
     on fc.icustay_id = tb.icustay_id
     and tb.itemid = 1
@@ -184,7 +182,7 @@ with ventilated as (
 , fluids_in_24 as (
   select distinct fc.icustay_id,
     round(sum(tb.cumvolume) over (partition by fc.icustay_id),2) fi_1d_ml
-  from tbrennan.echo_cohort fc
+  from tbrennan.hyperdynamic_control fc
   left join mimic2v26.totalbalevents tb
     on fc.icustay_id = tb.icustay_id
     and tb.itemid = 1
@@ -195,7 +193,7 @@ with ventilated as (
 , fluids_out_72 as (
   select distinct fc.icustay_id,
     round(sum(tb.cumvolume) over (partition by fc.icustay_id),2) fo_3d_ml
-  from tbrennan.hyperdynamic_cohort fc
+  from tbrennan.hyperdynamic_control fc
   left join mimic2v26.totalbalevents tb
     on fc.icustay_id = tb.icustay_id
     and tb.itemid = 2
@@ -206,7 +204,7 @@ with ventilated as (
 , fluids_out_24 as (
   select distinct fc.icustay_id,
     round(sum(tb.cumvolume) over (partition by fc.icustay_id),2) fo_1d_ml
-  from tbrennan.hyperdynamic_cohort fc
+  from tbrennan.hyperdynamic_control fc
   left join mimic2v26.totalbalevents tb
     on fc.icustay_id = tb.icustay_id
     and tb.itemid = 2
@@ -240,10 +238,9 @@ with ventilated as (
           when vp.vasopressor_duration is null then 0 else vp.vasopressor_duration
       end as vasopressor_duration
       , vp.start_pressors
-      , vp.dobutamine_flg
       
       
-    from tbrennan.hyperdynamic_cohort ec
+    from tbrennan.hyperdynamic_control ec
 
     left join tbrennan.rrt_cohort rc on rc.icustay_id = ec.icustay_id
 

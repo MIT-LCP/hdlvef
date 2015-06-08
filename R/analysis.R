@@ -36,7 +36,7 @@ cnt_analysis_p <- function(var, dep, ff, label) {
     label = gsub("CM_","",var)
     label = gsub("_"," ",tolower(label))
   }
-  if (var=="AGE" | var=="SOFA") {
+  if (var=="AGE" | var=="SOFA" | var=="FI_1D_ML" | var=="FI_3D_ML") {
     line = sprintf('%s & %.0f [%.0f - %.0f] & %.0f [%.0f - %.0f]',label,
                   m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
   }
@@ -47,7 +47,7 @@ cnt_analysis_p <- function(var, dep, ff, label) {
   if (tt$p.value<0.01) {
     line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,tt$p.value)
   } else if (tt$p.value<0.05) {
-    line = sprintf('%s&\\textbf{%.2f}\\\\',line,tt$p.value)
+    line = sprintf('%s&%.2f\\\\',line,tt$p.value)
   } else {
     line = sprintf('%s&%.1f\\\\',line,tt$p.value)
   }
@@ -96,13 +96,13 @@ labs_analysis_p <- function(var, dep, ff) {
     label = capitalize(label)
   }
   
-  line = sprintf('~~%s&%.1f [%.1f - %.1f]&%.2f [%.1f - %.1f]',label,
+  line = sprintf('~~%s&%.1f [%.1f - %.1f]&%.1f [%.1f - %.1f]',label,
                  m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
   
   if (tt$p.value<0.01) {
     line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,tt$p.value)
   } else if (tt$p.value<0.05) {
-    line = sprintf('%s&\\textbf{%.2f}\\\\',line,tt$p.value)
+    line = sprintf('%s&%.2f\\\\',line,tt$p.value)
   } else {
     line = sprintf('%s&%.1f\\\\',line,tt$p.value)
   }
@@ -143,7 +143,7 @@ prop_analysis_p = function(var, dep, ff, label) {
   if (fs$p.value<0.01) {
     line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,fs$p.value)
   } else if (fs$p.value<0.05) {
-    line = sprintf('%s&\\textbf{%.2f}\\\\',line,fs$p.value)
+    line = sprintf('%s&%.2f\\\\',line,fs$p.value)
   } else {
     line = sprintf('%s&%.1f\\\\',line,fs$p.value)
   }
@@ -164,9 +164,13 @@ treatment_analysis = function(var, dep, ff) {
   if (label == 'rrt') {
     label = 'RRT'
   } else {
-    label = capitalize(label)
+    if (label == 'dobutamine_flg') {
+      label = 'Received Dobutamine'
+    } else {
+      label = capitalize(label)
+    }
   }
-  
+
   line = sprintf('~~%s&%d (%.0f \\%s)&%d (%.0f \\%s)',label,
                  tn[2,1],100*p[2,1],'%',tn[2,2],100*p[2,2],'%')
   if (fs$p.value<0.05) {
@@ -190,16 +194,19 @@ treatment_analysis_p = function(var, dep, ff) {
   if (label == 'rrt') {
     label = 'RRT'
   } else {
-    label = capitalize(label)
+    if (label == 'dobutamine_flg') {
+      label = 'Received Dobutamine'
+    } else {
+      label = capitalize(label)
+    }
   }
-  
   line = sprintf('~~%s&%d (%.0f \\%s)&%d (%.0f \\%s)',label,
                  tn[2,1],100*p[2,1],'%',tn[2,2],100*p[2,2],'%')
   
   if (fs$p.value<0.01) {
     line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,fs$p.value)
   } else if (fs$p.value<0.05) {
-    line = sprintf('%s&\\textbf{%.2f}\\\\',line,fs$p.value)
+    line = sprintf('%s&%.2f\\\\',line,fs$p.value)
   } else {
     line = sprintf('%s&%.1f\\\\',line,fs$p.value)
   }
@@ -231,7 +238,7 @@ vasopressor_analysis_p = function(var, dep, ff) {
   if (tt$p.value<0.01) {
     line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,tt$p.value)
   } else if (tt$p.value<0.05) {
-    line = sprintf('%s&\\textbf{%.2f}\\\\',line,tt$p.value)
+    line = sprintf('%s&%.2f\\\\',line,tt$p.value)
   } else {
     line = sprintf('%s&%.1f\\\\',line,tt$p.value)
   }
@@ -285,7 +292,7 @@ elix_analysis_p = function(var, dep, ff) {
   if (fs$p.value<0.01) {
     line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,fs$p.value)
   } else if (fs$p.value<0.05) {
-    line = sprintf('%s&\\textbf{%.2f}\\\\',line,fs$p.value)
+    line = sprintf('%s&%.2f\\\\',line,fs$p.value)
   } else {
     line = sprintf('%s&%.1f\\\\',line,fs$p.value)
   }
@@ -303,18 +310,30 @@ vitals_analysis_p <- function(var, dep, ff) {
   label = gsub("_"," ",tolower(var))
   if (label == 'temp highest') {
     label = 'Max Temperature (C)'
-  } else if (label == 'hr highest') {
+    line = sprintf('~~%s&%.1f [%.1f - %.1f]&%.1f [%.1f - %.1f]',label,
+                   m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
+
+    } else if (label == 'hr highest') {
     label = 'Max HR (bpm)'
+    line = sprintf('~~%s&%.0f [%.0f - %.0f]&%.0f [%.0f - %.0f]',label,
+                   m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
+    
+    } else if (label == 'hr median d1') {
+      label = 'Median HR Day1 (bpm)'
+      line = sprintf('~~%s&%.0f [%.0f - %.0f]&%.0f [%.0f - %.0f]',label,
+                     m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
+      
   } else if (label == 'map lowest') {
     label = 'Min MAP'
+    line = sprintf('~~%s&%.0f [%.0f - %.0f]&%.0f [%.0f - %.0f]',label,
+                   m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
+    
   } 
-  line = sprintf('~~%s&%.1f [%.1f - %.1f]&%.2f [%.1f - %.1f]',label,
-                 m[1,2],s[1,2][2],s[1,2][4],m[2,2],s[2,2][2],s[2,2][4])
   
   if (tt$p.value<0.01) {
     line = sprintf('%s&\\textbf{$<$ 0.01}\\\\',line,tt$p.value)
   } else if (tt$p.value<0.05) {
-    line = sprintf('%s&\\textbf{%.2f}\\\\',line,tt$p.value)
+    line = sprintf('%s&%.2f\\\\',line,tt$p.value)
   } else {
     line = sprintf('%s&%.1f\\\\',line,tt$p.value)
   }

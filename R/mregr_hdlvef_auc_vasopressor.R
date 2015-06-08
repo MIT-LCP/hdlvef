@@ -3,9 +3,9 @@ writeLines("~ & Odds-ratio (95\\% Confidence Interval) & $P$-value\\\\ \\hline",
 
 # LOGISTIC REGRESSION
 regres_labels = c("Age","Gender (Male)","Elixhauser Score","SOFA","Ventilated",
-                  "Total Volume Vasopressors","HDLVEF")
+                  "Vasopressor Duration","HDLVEF")
 mylogit = glm(MORTALITY_28D ~ AGE + GENDER + ELIX_28D_PT + SOFA + 
-              VENTILATED + AUC_VASOPRESSOR_DOSE + HDLVEF,
+              VENTILATED + VASOPRESSOR_DURATION + HDLVEF,
               data=COHORT,family="binomial")
 # Coefficients of Logistic Regression
 cfs = summary(mylogit)$coefficients

@@ -4,7 +4,8 @@ dep = "HDLVEF"
 y = eval(parse(text=dep))
 
 
-filename = sprintf("%s/report/table1_normal-%s.tex",path,tolower(dep)); 
+#filename = sprintf("%s/report/table1_normal-%s.tex",path,tolower(dep)); 
+filename = sprintf("%s/report/table1_normal-control.tex",path); 
 ff = file(filename,open="wt")
 
 line = sprintf(" & \\textbf{NLVEF} (N=%d) & \\textbf{HDLVEF} (N=%d) & $P$-value\\\\",sum(y==0),sum(y==1))
@@ -52,6 +53,7 @@ for ( j in seq(1,length(ll)) ) {
 
 # Time from ICU intime to ECHO report
 cnt_analysis_p("ECHO_DT",dep,ff,"Time to echo (days)")
+cnt_analysis_p("VASOPRESSOR_DT",dep,ff,"Time to vasopressors (days)")
 
 # Elixhauser co-morbidities
 # fix proportions
@@ -77,6 +79,8 @@ lapply(vars_treat,treatment_analysis_p,dep,ff)
 
 # Fluids
 cnt_analysis_p("FI_1D_ML",dep,ff,"~~IVF first 24hr (ml)")
+cnt_analysis_p("FI_3D_ML",dep,ff,"~~IVF first 72hr (ml)")
+
 
 close(ff)
 
